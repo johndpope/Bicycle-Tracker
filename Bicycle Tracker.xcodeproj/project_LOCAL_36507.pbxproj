@@ -1,0 +1,923 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0116E8FC1C6BEDAD00568E9C /* BTRouteOutdoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116E8FB1C6BEDAD00568E9C /* BTRouteOutdoorViewController.swift */; };
+		0129D9691C6D17F70064AE12 /* BTUserInteraceIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129D9681C6D17F70064AE12 /* BTUserInteraceIO.swift */; };
+		0129D96B1C6D1B320064AE12 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0129D96A1C6D1B320064AE12 /* MapKit.framework */; };
+		019558411C68BA7E0053C2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019558401C68BA7E0053C2CF /* AppDelegate.swift */; };
+		019558431C68BA7E0053C2CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019558421C68BA7E0053C2CF /* ViewController.swift */; };
+		019558461C68BA7E0053C2CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019558441C68BA7E0053C2CF /* Main.storyboard */; };
+		019558481C68BA7E0053C2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019558471C68BA7E0053C2CF /* Assets.xcassets */; };
+		0195584B1C68BA7E0053C2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019558491C68BA7E0053C2CF /* LaunchScreen.storyboard */; };
+		019558561C68BA7E0053C2CF /* Bicycle_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019558551C68BA7E0053C2CF /* Bicycle_TrackerTests.swift */; };
+		019558611C68BA7E0053C2CF /* Bicycle_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019558601C68BA7E0053C2CF /* Bicycle_TrackerUITests.swift */; };
+		289DEA9A1C705E4C008CDE7F /* BTOutdoorModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DEA991C705E4C008CDE7F /* BTOutdoorModuleInterface.swift */; };
+		289DEA9B1C70D1A7008CDE7F /* BTTrackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDF01C69EBD10050097B /* BTTrackItem.swift */; };
+		289DEA9D1C70D25D008CDE7F /* BTFetchDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDE81C69EB060050097B /* BTFetchDataPresenter.swift */; };
+		289DEA9F1C70D280008CDE7F /* BTFetchTrackItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062DA8C1C6C816B00C44198 /* BTFetchTrackItemDelegate.swift */; };
+		D004899E1C708689000DD9C0 /* Item.xml in Resources */ = {isa = PBXBuildFile; fileRef = D004899D1C708689000DD9C0 /* Item.xml */; };
+		D00489A21C711B82000DD9C0 /* BTNewRoutePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00489A11C711B82000DD9C0 /* BTNewRoutePresenter.swift */; };
+		D061994C1C71C6D30079DA7A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D061994B1C71C6D30079DA7A /* Podfile */; };
+		D062DA841C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062DA831C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift */; };
+		D0D23D591C72403500B5E9B7 /* BTXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D581C72403500B5E9B7 /* BTXMLParser.swift */; };
+		D0D23D5B1C726BF100B5E9B7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D23D5A1C726BF100B5E9B7 /* libxml2.tbd */; };
+		D0D23D5D1C726C0A00B5E9B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D23D5C1C726C0A00B5E9B7 /* libz.tbd */; };
+		D0D23D5F1C72719D00B5E9B7 /* BTXMLDocumentWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D5E1C72719D00B5E9B7 /* BTXMLDocumentWriter.swift */; };
+		D0D23D641C73B3E600B5E9B7 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D631C73B3E600B5E9B7 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D0D23D661C75B3DF00B5E9B7 /* BTRouteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D651C75B3DF00B5E9B7 /* BTRouteListInteractor.swift */; };
+		D0D23D681C75B8DE00B5E9B7 /* Items.xml in Resources */ = {isa = PBXBuildFile; fileRef = D0D23D671C75B8DE00B5E9B7 /* Items.xml */; };
+		E9FF569C00899A180B3AC83B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF1D45F595543B900DA828B /* libPods.a */; };
+		EE24CDE11C68D64D0050097B /* BTInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDE01C68D64D0050097B /* BTInteractor.swift */; };
+		EE24CDE31C6915D50050097B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE24CDE21C6915D50050097B /* MapKit.framework */; };
+		EE24CDE51C69161D0050097B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE24CDE41C69161D0050097B /* CoreLocation.framework */; };
+		EE24CDEB1C69EB3D0050097B /* BTGetDataFromPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDEA1C69EB3D0050097B /* BTGetDataFromPresenter.swift */; };
+		EE24CDED1C69EB690050097B /* BTPoiItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDEC1C69EB690050097B /* BTPoiItem.swift */; };
+		EE24CDEF1C69EBA00050097B /* BTGeolocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDEE1C69EBA00050097B /* BTGeolocationData.swift */; };
+		EE24CDF31C69F6610050097B /* BTGetDataFromPresenterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDF21C69F6610050097B /* BTGetDataFromPresenterRequest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		019558521C68BA7E0053C2CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019558351C68BA7E0053C2CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0195583C1C68BA7E0053C2CF;
+			remoteInfo = "Bicycle Tracker";
+		};
+		0195585D1C68BA7E0053C2CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019558351C68BA7E0053C2CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0195583C1C68BA7E0053C2CF;
+			remoteInfo = "Bicycle Tracker";
+		};
+		D062DA861C6BBA7C00C44198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019558351C68BA7E0053C2CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0195583C1C68BA7E0053C2CF;
+			remoteInfo = "Bicycle Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0116E8FB1C6BEDAD00568E9C /* BTRouteOutdoorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTRouteOutdoorViewController.swift; sourceTree = "<group>"; };
+		0129D9681C6D17F70064AE12 /* BTUserInteraceIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUserInteraceIO.swift; sourceTree = "<group>"; };
+		0129D96A1C6D1B320064AE12 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0195583D1C68BA7E0053C2CF /* Bicycle Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bicycle Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019558401C68BA7E0053C2CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		019558421C68BA7E0053C2CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		019558451C68BA7E0053C2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		019558471C68BA7E0053C2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0195584A1C68BA7E0053C2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0195584C1C68BA7E0053C2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019558511C68BA7E0053C2CF /* Bicycle TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bicycle TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019558551C68BA7E0053C2CF /* Bicycle_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bicycle_TrackerTests.swift; sourceTree = "<group>"; };
+		019558571C68BA7E0053C2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0195585C1C68BA7E0053C2CF /* Bicycle TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bicycle TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019558601C68BA7E0053C2CF /* Bicycle_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bicycle_TrackerUITests.swift; sourceTree = "<group>"; };
+		019558621C68BA7E0053C2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289DEA991C705E4C008CDE7F /* BTOutdoorModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTOutdoorModuleInterface.swift; sourceTree = "<group>"; };
+		66944AD690075D1222CF7AC6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8DF1D45F595543B900DA828B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0D42901727EA1BBC9FBF90A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D004899D1C708689000DD9C0 /* Item.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Item.xml; sourceTree = "<group>"; };
+		D00489A11C711B82000DD9C0 /* BTNewRoutePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTNewRoutePresenter.swift; sourceTree = "<group>"; };
+		D061994B1C71C6D30079DA7A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D062DA811C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Interactor_Bicycle_TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D062DA831C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor_Bicycle_TrackerTests.swift; sourceTree = "<group>"; };
+		D062DA851C6BBA7C00C44198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D062DA8C1C6C816B00C44198 /* BTFetchTrackItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTFetchTrackItemDelegate.swift; sourceTree = "<group>"; };
+		D0D23D581C72403500B5E9B7 /* BTXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTXMLParser.swift; sourceTree = "<group>"; };
+		D0D23D5A1C726BF100B5E9B7 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		D0D23D5C1C726C0A00B5E9B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D0D23D5E1C72719D00B5E9B7 /* BTXMLDocumentWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTXMLDocumentWriter.swift; sourceTree = "<group>"; };
+		D0D23D611C73B3BC00B5E9B7 /* GDataXMLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		D0D23D621C73B3E600B5E9B7 /* Bicycle Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bicycle Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0D23D631C73B3E600B5E9B7 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		D0D23D651C75B3DF00B5E9B7 /* BTRouteListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTRouteListInteractor.swift; sourceTree = "<group>"; };
+		D0D23D671C75B8DE00B5E9B7 /* Items.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Items.xml; sourceTree = "<group>"; };
+		EE24CDE01C68D64D0050097B /* BTInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTInteractor.swift; sourceTree = "<group>"; };
+		EE24CDE21C6915D50050097B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EE24CDE41C69161D0050097B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EE24CDE81C69EB060050097B /* BTFetchDataPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTFetchDataPresenter.swift; sourceTree = "<group>"; };
+		EE24CDEA1C69EB3D0050097B /* BTGetDataFromPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTGetDataFromPresenter.swift; sourceTree = "<group>"; };
+		EE24CDEC1C69EB690050097B /* BTPoiItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTPoiItem.swift; sourceTree = "<group>"; };
+		EE24CDEE1C69EBA00050097B /* BTGeolocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTGeolocationData.swift; sourceTree = "<group>"; };
+		EE24CDF01C69EBD10050097B /* BTTrackItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackItem.swift; sourceTree = "<group>"; };
+		EE24CDF21C69F6610050097B /* BTGetDataFromPresenterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTGetDataFromPresenterRequest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0195583A1C68BA7E0053C2CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D23D5D1C726C0A00B5E9B7 /* libz.tbd in Frameworks */,
+				D0D23D5B1C726BF100B5E9B7 /* libxml2.tbd in Frameworks */,
+				EE24CDE51C69161D0050097B /* CoreLocation.framework in Frameworks */,
+				EE24CDE31C6915D50050097B /* MapKit.framework in Frameworks */,
+				0129D96B1C6D1B320064AE12 /* MapKit.framework in Frameworks */,
+				E9FF569C00899A180B3AC83B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0195584E1C68BA7E0053C2CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019558591C68BA7E0053C2CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D062DA7E1C6BBA7C00C44198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0116E8F41C6BEC1700568E9C /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0116E8FB1C6BEDAD00568E9C /* BTRouteOutdoorViewController.swift */,
+				0129D9681C6D17F70064AE12 /* BTUserInteraceIO.swift */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		0129D96C1C6D1B6D0064AE12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0D23D601C73B2AD00B5E9B7 /* XMLDocumentClass */,
+				D0D23D5C1C726C0A00B5E9B7 /* libz.tbd */,
+				D0D23D5A1C726BF100B5E9B7 /* libxml2.tbd */,
+				0129D96A1C6D1B320064AE12 /* MapKit.framework */,
+				8DF1D45F595543B900DA828B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0129D96D1C6D3EC20064AE12 /* Outdoor mode */ = {
+			isa = PBXGroup;
+			children = (
+				0116E8F41C6BEC1700568E9C /* User Interface */,
+			);
+			name = "Outdoor mode";
+			sourceTree = "<group>";
+		};
+		0129D96E1C6D3EDA0064AE12 /* Indoor mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Indoor mode";
+			sourceTree = "<group>";
+		};
+		019558341C68BA7E0053C2CF = {
+			isa = PBXGroup;
+			children = (
+				D061994B1C71C6D30079DA7A /* Podfile */,
+				EE24CDE41C69161D0050097B /* CoreLocation.framework */,
+				EE24CDE21C6915D50050097B /* MapKit.framework */,
+				0195583F1C68BA7E0053C2CF /* Bicycle Tracker */,
+				019558541C68BA7E0053C2CF /* Bicycle TrackerTests */,
+				0195585F1C68BA7E0053C2CF /* Bicycle TrackerUITests */,
+				D062DA821C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests */,
+				0195583E1C68BA7E0053C2CF /* Products */,
+				0129D96C1C6D1B6D0064AE12 /* Frameworks */,
+				E08BB31E44A3999569BD685B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		0195583E1C68BA7E0053C2CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0195583D1C68BA7E0053C2CF /* Bicycle Tracker.app */,
+				D062DA811C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.xctest */,
+				019558511C68BA7E0053C2CF /* Bicycle TrackerTests.xctest */,
+				0195585C1C68BA7E0053C2CF /* Bicycle TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0195583F1C68BA7E0053C2CF /* Bicycle Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D004899C1C708637000DD9C0 /* Item */,
+				D00489991C704FCC000DD9C0 /* Presenter */,
+				EE24CDDF1C68D5970050097B /* Interactor */,
+				289DEA991C705E4C008CDE7F /* BTOutdoorModuleInterface.swift */,
+				019558401C68BA7E0053C2CF /* AppDelegate.swift */,
+				019558421C68BA7E0053C2CF /* ViewController.swift */,
+				0129D96E1C6D3EDA0064AE12 /* Indoor mode */,
+				0129D96D1C6D3EC20064AE12 /* Outdoor mode */,
+				019558441C68BA7E0053C2CF /* Main.storyboard */,
+				019558471C68BA7E0053C2CF /* Assets.xcassets */,
+				019558491C68BA7E0053C2CF /* LaunchScreen.storyboard */,
+				0195584C1C68BA7E0053C2CF /* Info.plist */,
+			);
+			path = "Bicycle Tracker";
+			sourceTree = "<group>";
+		};
+		019558541C68BA7E0053C2CF /* Bicycle TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				019558551C68BA7E0053C2CF /* Bicycle_TrackerTests.swift */,
+				019558571C68BA7E0053C2CF /* Info.plist */,
+			);
+			path = "Bicycle TrackerTests";
+			sourceTree = "<group>";
+		};
+		0195585F1C68BA7E0053C2CF /* Bicycle TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				019558601C68BA7E0053C2CF /* Bicycle_TrackerUITests.swift */,
+				019558621C68BA7E0053C2CF /* Info.plist */,
+			);
+			path = "Bicycle TrackerUITests";
+			sourceTree = "<group>";
+		};
+		D00489991C704FCC000DD9C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D00489A11C711B82000DD9C0 /* BTNewRoutePresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		D004899C1C708637000DD9C0 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D004899D1C708689000DD9C0 /* Item.xml */,
+				D0D23D581C72403500B5E9B7 /* BTXMLParser.swift */,
+				D0D23D5E1C72719D00B5E9B7 /* BTXMLDocumentWriter.swift */,
+				D0D23D671C75B8DE00B5E9B7 /* Items.xml */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		D062DA821C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D062DA831C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift */,
+				D062DA851C6BBA7C00C44198 /* Info.plist */,
+			);
+			path = Interactor_Bicycle_TrackerTests;
+			sourceTree = "<group>";
+		};
+		D062DA8B1C6C80C400C44198 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D062DA8C1C6C816B00C44198 /* BTFetchTrackItemDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D0D23D601C73B2AD00B5E9B7 /* XMLDocumentClass */ = {
+			isa = PBXGroup;
+			children = (
+				D0D23D631C73B3E600B5E9B7 /* GDataXMLNode.m */,
+				D0D23D611C73B3BC00B5E9B7 /* GDataXMLNode.h */,
+				D0D23D621C73B3E600B5E9B7 /* Bicycle Tracker-Bridging-Header.h */,
+			);
+			name = XMLDocumentClass;
+			sourceTree = "<group>";
+		};
+		E08BB31E44A3999569BD685B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0D42901727EA1BBC9FBF90A /* Pods.debug.xcconfig */,
+				66944AD690075D1222CF7AC6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE24CDDF1C68D5970050097B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D062DA8B1C6C80C400C44198 /* Protocols */,
+				EE24CDE01C68D64D0050097B /* BTInteractor.swift */,
+				EE24CDE81C69EB060050097B /* BTFetchDataPresenter.swift */,
+				EE24CDEA1C69EB3D0050097B /* BTGetDataFromPresenter.swift */,
+				EE24CDEC1C69EB690050097B /* BTPoiItem.swift */,
+				EE24CDEE1C69EBA00050097B /* BTGeolocationData.swift */,
+				EE24CDF01C69EBD10050097B /* BTTrackItem.swift */,
+				EE24CDF21C69F6610050097B /* BTGetDataFromPresenterRequest.swift */,
+				D0D23D651C75B3DF00B5E9B7 /* BTRouteListInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0195583C1C68BA7E0053C2CF /* Bicycle Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019558651C68BA7E0053C2CF /* Build configuration list for PBXNativeTarget "Bicycle Tracker" */;
+			buildPhases = (
+				81ED6DD9464DD6DB9B0B531B /* Check Pods Manifest.lock */,
+				019558391C68BA7E0053C2CF /* Sources */,
+				0195583A1C68BA7E0053C2CF /* Frameworks */,
+				0195583B1C68BA7E0053C2CF /* Resources */,
+				184D9708BEA8127A50376527 /* Embed Pods Frameworks */,
+				EEA1FF41FB6070214A231282 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bicycle Tracker";
+			productName = "Bicycle Tracker";
+			productReference = 0195583D1C68BA7E0053C2CF /* Bicycle Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		019558501C68BA7E0053C2CF /* Bicycle TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019558681C68BA7E0053C2CF /* Build configuration list for PBXNativeTarget "Bicycle TrackerTests" */;
+			buildPhases = (
+				0195584D1C68BA7E0053C2CF /* Sources */,
+				0195584E1C68BA7E0053C2CF /* Frameworks */,
+				0195584F1C68BA7E0053C2CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019558531C68BA7E0053C2CF /* PBXTargetDependency */,
+			);
+			name = "Bicycle TrackerTests";
+			productName = "Bicycle TrackerTests";
+			productReference = 019558511C68BA7E0053C2CF /* Bicycle TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0195585B1C68BA7E0053C2CF /* Bicycle TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0195586B1C68BA7E0053C2CF /* Build configuration list for PBXNativeTarget "Bicycle TrackerUITests" */;
+			buildPhases = (
+				019558581C68BA7E0053C2CF /* Sources */,
+				019558591C68BA7E0053C2CF /* Frameworks */,
+				0195585A1C68BA7E0053C2CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0195585E1C68BA7E0053C2CF /* PBXTargetDependency */,
+			);
+			name = "Bicycle TrackerUITests";
+			productName = "Bicycle TrackerUITests";
+			productReference = 0195585C1C68BA7E0053C2CF /* Bicycle TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D062DA801C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D062DA8A1C6BBA7C00C44198 /* Build configuration list for PBXNativeTarget "Interactor_Bicycle_TrackerTests" */;
+			buildPhases = (
+				D062DA7D1C6BBA7C00C44198 /* Sources */,
+				D062DA7E1C6BBA7C00C44198 /* Frameworks */,
+				D062DA7F1C6BBA7C00C44198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D062DA871C6BBA7C00C44198 /* PBXTargetDependency */,
+			);
+			name = Interactor_Bicycle_TrackerTests;
+			productName = Interactor_Bicycle_TrackerTests;
+			productReference = D062DA811C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		019558351C68BA7E0053C2CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = imvimm;
+				TargetAttributes = {
+					0195583C1C68BA7E0053C2CF = {
+						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					019558501C68BA7E0053C2CF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0195583C1C68BA7E0053C2CF;
+					};
+					0195585B1C68BA7E0053C2CF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0195583C1C68BA7E0053C2CF;
+					};
+					D062DA801C6BBA7C00C44198 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 0195583C1C68BA7E0053C2CF;
+					};
+				};
+			};
+			buildConfigurationList = 019558381C68BA7E0053C2CF /* Build configuration list for PBXProject "Bicycle Tracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 019558341C68BA7E0053C2CF;
+			productRefGroup = 0195583E1C68BA7E0053C2CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0195583C1C68BA7E0053C2CF /* Bicycle Tracker */,
+				019558501C68BA7E0053C2CF /* Bicycle TrackerTests */,
+				0195585B1C68BA7E0053C2CF /* Bicycle TrackerUITests */,
+				D062DA801C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0195583B1C68BA7E0053C2CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D23D681C75B8DE00B5E9B7 /* Items.xml in Resources */,
+				D061994C1C71C6D30079DA7A /* Podfile in Resources */,
+				0195584B1C68BA7E0053C2CF /* LaunchScreen.storyboard in Resources */,
+				019558481C68BA7E0053C2CF /* Assets.xcassets in Resources */,
+				D004899E1C708689000DD9C0 /* Item.xml in Resources */,
+				019558461C68BA7E0053C2CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0195584F1C68BA7E0053C2CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0195585A1C68BA7E0053C2CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D062DA7F1C6BBA7C00C44198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		184D9708BEA8127A50376527 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81ED6DD9464DD6DB9B0B531B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EEA1FF41FB6070214A231282 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019558391C68BA7E0053C2CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289DEA9F1C70D280008CDE7F /* BTFetchTrackItemDelegate.swift in Sources */,
+				EE24CDEF1C69EBA00050097B /* BTGeolocationData.swift in Sources */,
+				EE24CDE11C68D64D0050097B /* BTInteractor.swift in Sources */,
+				019558431C68BA7E0053C2CF /* ViewController.swift in Sources */,
+				D00489A21C711B82000DD9C0 /* BTNewRoutePresenter.swift in Sources */,
+				0129D9691C6D17F70064AE12 /* BTUserInteraceIO.swift in Sources */,
+				019558411C68BA7E0053C2CF /* AppDelegate.swift in Sources */,
+				D0D23D661C75B3DF00B5E9B7 /* BTRouteListInteractor.swift in Sources */,
+				D0D23D5F1C72719D00B5E9B7 /* BTXMLDocumentWriter.swift in Sources */,
+				EE24CDED1C69EB690050097B /* BTPoiItem.swift in Sources */,
+				EE24CDF31C69F6610050097B /* BTGetDataFromPresenterRequest.swift in Sources */,
+				EE24CDEB1C69EB3D0050097B /* BTGetDataFromPresenter.swift in Sources */,
+				D0D23D641C73B3E600B5E9B7 /* GDataXMLNode.m in Sources */,
+				0116E8FC1C6BEDAD00568E9C /* BTRouteOutdoorViewController.swift in Sources */,
+				289DEA9A1C705E4C008CDE7F /* BTOutdoorModuleInterface.swift in Sources */,
+				289DEA9B1C70D1A7008CDE7F /* BTTrackItem.swift in Sources */,
+				289DEA9D1C70D25D008CDE7F /* BTFetchDataPresenter.swift in Sources */,
+				D0D23D591C72403500B5E9B7 /* BTXMLParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0195584D1C68BA7E0053C2CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019558561C68BA7E0053C2CF /* Bicycle_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019558581C68BA7E0053C2CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019558611C68BA7E0053C2CF /* Bicycle_TrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D062DA7D1C6BBA7C00C44198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D062DA841C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		019558531C68BA7E0053C2CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0195583C1C68BA7E0053C2CF /* Bicycle Tracker */;
+			targetProxy = 019558521C68BA7E0053C2CF /* PBXContainerItemProxy */;
+		};
+		0195585E1C68BA7E0053C2CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0195583C1C68BA7E0053C2CF /* Bicycle Tracker */;
+			targetProxy = 0195585D1C68BA7E0053C2CF /* PBXContainerItemProxy */;
+		};
+		D062DA871C6BBA7C00C44198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0195583C1C68BA7E0053C2CF /* Bicycle Tracker */;
+			targetProxy = D062DA861C6BBA7C00C44198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		019558441C68BA7E0053C2CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019558451C68BA7E0053C2CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		019558491C68BA7E0053C2CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0195584A1C68BA7E0053C2CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		019558631C68BA7E0053C2CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		019558641C68BA7E0053C2CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		019558661C68BA7E0053C2CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D42901727EA1BBC9FBF90A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = "Bicycle Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MBProgressHUD\"",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lxml2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "imvimm.Bicycle-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bicycle Tracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		019558671C68BA7E0053C2CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66944AD690075D1222CF7AC6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = "Bicycle Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MBProgressHUD\"",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lxml2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "imvimm.Bicycle-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bicycle Tracker-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		019558691C68BA7E0053C2CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bicycle TrackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "imvimm.Bicycle-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bicycle Tracker.app/Bicycle Tracker";
+			};
+			name = Debug;
+		};
+		0195586A1C68BA7E0053C2CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bicycle TrackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "imvimm.Bicycle-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bicycle Tracker.app/Bicycle Tracker";
+			};
+			name = Release;
+		};
+		0195586C1C68BA7E0053C2CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Bicycle TrackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "imvimm.Bicycle-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bicycle Tracker";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0195586D1C68BA7E0053C2CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Bicycle TrackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "imvimm.Bicycle-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bicycle Tracker";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		D062DA881C6BBA7C00C44198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Interactor_Bicycle_TrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MobileDepartment.Interactor-Bicycle-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bicycle Tracker.app/Bicycle Tracker";
+			};
+			name = Debug;
+		};
+		D062DA891C6BBA7C00C44198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Interactor_Bicycle_TrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MobileDepartment.Interactor-Bicycle-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bicycle Tracker.app/Bicycle Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019558381C68BA7E0053C2CF /* Build configuration list for PBXProject "Bicycle Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019558631C68BA7E0053C2CF /* Debug */,
+				019558641C68BA7E0053C2CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		019558651C68BA7E0053C2CF /* Build configuration list for PBXNativeTarget "Bicycle Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019558661C68BA7E0053C2CF /* Debug */,
+				019558671C68BA7E0053C2CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		019558681C68BA7E0053C2CF /* Build configuration list for PBXNativeTarget "Bicycle TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019558691C68BA7E0053C2CF /* Debug */,
+				0195586A1C68BA7E0053C2CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0195586B1C68BA7E0053C2CF /* Build configuration list for PBXNativeTarget "Bicycle TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0195586C1C68BA7E0053C2CF /* Debug */,
+				0195586D1C68BA7E0053C2CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D062DA8A1C6BBA7C00C44198 /* Build configuration list for PBXNativeTarget "Interactor_Bicycle_TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D062DA881C6BBA7C00C44198 /* Debug */,
+				D062DA891C6BBA7C00C44198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 019558351C68BA7E0053C2CF /* Project object */;
+}

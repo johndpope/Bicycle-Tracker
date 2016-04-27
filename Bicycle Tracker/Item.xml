@@ -1,0 +1,98 @@
+
+<tracks>
+    
+    <track>
+        
+        <trackId>
+        </trackId>
+        
+        <nameTracking>
+        </nameTracking>
+        
+        <nameFileScreenShotRoute>
+        </nameFileScreenShotRoute>
+        
+        <typeOfRiding>
+        </typeOfRiding>
+        
+        <placeOfRiding>
+        </placeOfRiding>
+        
+        <numberOfCycles>
+        </numberOfCycles>
+        
+        <length>
+        </length>
+        
+        <duration>
+        </duration>
+        
+        <heightDifference>
+        </heightDifference>
+        
+        <startingLocation>
+        </startingLocation>
+        
+        <finishingLocation>
+        </finishingLocation>
+        
+        <startingTime>
+        </startingTime>
+        
+        <finishingTime>
+        </finishingTime>
+        
+        <comments>
+        </comments>
+        
+        <listLocations>
+            
+            <location>
+                
+                <latitude>
+                </latitude>
+                
+                <longitude>
+                </longitude>
+                
+                <altitude>
+                </altitude>
+                
+                <speed>
+                </speed>
+                
+                <timeStamp>
+                </timeStamp>
+                
+                <floor>
+                </floor>
+                
+                <distanceFromLocation>
+                </distanceFromLocation>
+                
+                <listPOI>
+                    
+                    <POI>
+                        
+                        <namePOI>
+                        </namePOI>
+                        
+                        <commentsPOI>
+                        </commentsPOI>
+                        
+                        <typePOI>
+                        </typePOI>
+                        
+                        <restingTime>
+                        </restingTime>
+                        
+                    </POI>
+                    
+                </listPOI>
+            </location>
+            
+        </listLocations>
+        
+    </track>
+    
+</tracks>
