@@ -146,6 +146,11 @@ extension BTNewRouteViewController: MKMapViewDelegate {
    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
       viewMap.setCenterCoordinate(userLocation.coordinate, animated: false)
    }
+    func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
+        if let coordinate = currentRegion?.center {
+            viewMap.setCenterCoordinate(coordinate, animated: false)
+        }
+    }
 }
 
 // MARK: - BTNewRouteViewInput
