@@ -19,6 +19,7 @@ struct BTGeolocationData {
     var speed: Double?
     var timeStamp: NSDate?
     var floor: Int?
+    var course: Double?
     var distanceFromLocation: Double?
     var listPOI = [BTPoiItem]()
     

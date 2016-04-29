@@ -12,6 +12,7 @@ class BTDetailRouteViewPresenter: NSObject {
     var view: BTDetailRouteViewInput?
     var interactor: BTDetailRouteViewInteractorInput?
     var trackId: Int?
+    private var trackItem: BTTrackItem?
     var displayData: BTDetailRouteUpcomingDisplayItem?
 }
 
@@ -53,6 +54,8 @@ extension BTDetailRouteViewPresenter: BTDetailRouteViewInteractorOutput {
         // convert data from interactor into appropriate format
         var displayItem = BTDetailRouteUpcomingDisplayItem()
         
+        trackItem = item
+        
         if let optionalValue = item.presenterData?.nameTracking {
             displayItem.name = optionalValue
         }
@@ -84,4 +87,7 @@ extension BTDetailRouteViewPresenter: BTDetailRouteViewInteractorOutput {
         view?.setupDetailRouteViewWithRoute(displayItem)
         }
     }
+    func startTracking() {
+        weak var _ = BTTrackingRoutefPresenter(item: trackItem!, view: self.view as! BTDetailRouteViewController)
+            }
 }

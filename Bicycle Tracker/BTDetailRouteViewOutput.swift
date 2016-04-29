@@ -11,4 +11,5 @@ import Foundation
 protocol BTDetailRouteViewOutput {
    func didTriggerShareButtonTapped()
    func setupView()
+   func startTracking()
 }

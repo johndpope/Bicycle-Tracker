@@ -9,6 +9,31 @@
         <nameTracking>
         </nameTracking>
         
+        <midWay>
+            
+            <latitudeMidWay>
+                </latitudeMidWay>
+            
+            <longitudeMidWay>
+                </longitudeMidWay>
+            
+        </midWay>
+        
+        <routeComplexity>
+            </routeComplexity>
+        
+        <middleRouteAddress>
+            </middleRouteAddress>
+        
+        <circleRoute>
+            </circleRoute>
+        
+        <addressStartPoint>
+        </addressStartPoint>
+        
+        <addressFinishPoint>
+        </addressFinishPoint>
+        
         <nameFileScreenShotRoute>
         </nameFileScreenShotRoute>
         
@@ -45,6 +70,82 @@
         <comments>
         </comments>
         
+        <usersTracks>
+            
+                <user>
+                    
+                        <userTrackId>
+                            </userTrackId>
+                        
+                        <userDurationTracking>
+                            </userDurationTracking>
+                        
+                        <userDistanceTraveled>
+                            </userDistanceTraveled>
+                        
+                        <userTraveledPoints>
+                            
+                            <userPoint>
+                                
+                                <onWay>
+                                    </onWay>
+                                
+                                <userLocation>
+                                    
+                                    <userLatitude>
+                                        </userLatitude>
+                                    
+                                    <userLongitude>
+                                        </userLongitude>
+                                    
+                                    <userAltitude>
+                                        </userAltitude>
+                                    
+                                    <userSpeed>
+                                        </userSpeed>
+                                    
+                                    <userFloor>
+                                        </userFloor>
+                                    
+                                    <userTimeStamp>
+                                        </userTimeStamp>
+                                    
+                                    <userCourse>
+                                        </userCourse>
+                                    
+                                    <userDistanceFromLocation>
+                                        </userDistanceFromLocation>
+                                    
+                                    <userListPOI>
+                                        
+                                        <userPOI>
+                                            
+                                            <userNamePOI>
+                                                </userNamePOI>
+                                            
+                                            <userCommentsPOI>
+                                                </userCommentsPOI>
+                                            
+                                            <userTypePOI>
+                                                </userTypePOI>
+                                            
+                                            <userRestingTimePOI>
+                                                </userRestingTimePOI>
+                                            
+                                            </userPOI>
+                                        
+                                        </userListPOI>
+                                    
+                                    </userLocation>
+                                
+                                </userPoint>
+                            
+                            </userTraveledPoints>
+
+                    </user>
+                
+            </usersTracks>
+        
         <listLocations>
             
             <location>
@@ -66,6 +167,9 @@
                 
                 <floor>
                 </floor>
+                
+                <course>
+                    </course>
                 
                 <distanceFromLocation>
                 </distanceFromLocation>

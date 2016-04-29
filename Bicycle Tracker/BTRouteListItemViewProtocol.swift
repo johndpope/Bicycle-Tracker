@@ -9,8 +9,14 @@
 import UIKit
 
 protocol BTRouteListItemViewProtocol {
-    func setName(name: String)
-    func setLength(length: String)
-    func setDuration(duration: String)
-    func setScreenshot(screenshot: UIImage)
+   func setName(name: String)
+   func setStartAddress(startAddress: String)
+   func setFinishAddress(finishAddress: String)
+   func setMiddleAddress(middleAddress: String)
+   func setLength(length: String)
+   func setDuration(duration: String)
+   func setHeightDifference(heightDifference: String)
+   func setScreenshot(screenshot: UIImage)
+   func setDifficulty(level: String)
+   func setCycleRoute(cycle: Bool)
 }

@@ -20,7 +20,7 @@ protocol BTDetailRouteViewInteractorInput {
     //query detail information about track of id
     func queryDetailTrack(trackID: Int)
     
-  }
+}
 
 protocol BTDetailRouteViewInteractorOutput: class {
     
@@ -30,7 +30,7 @@ protocol BTDetailRouteViewInteractorOutput: class {
 
 class BTDetailRouteViewInteractor: NSObject {
     
-   private  weak var presenter: BTDetailRouteViewInteractorOutput?
+    private  weak var presenter: BTDetailRouteViewInteractorOutput?
     private var detailRoute: BTTrackItem?
     private var parser: BTXMLParserModuleOutput?
     private var itemsTrack: [BTTrackItem]?
@@ -39,8 +39,8 @@ class BTDetailRouteViewInteractor: NSObject {
     override init() {
         parser = BTXMLParser(nameFile: nil)
         super.init()
-         setFetchDataToItem(BTXMLDocumentWriter(nameFile: nil))
-       
+        setFetchDataToItem(BTXMLDocumentWriter(nameFile: nil))
+        
     }
     
     //set parser
@@ -55,7 +55,7 @@ class BTDetailRouteViewInteractor: NSObject {
     
     //create screen shot for trackers
     private func createScreenShot(itemTrack: BTTrackItem) {
-       itemsTrack?.removeLast()
+        itemsTrack?.removeLast()
         var item: BTTrackItem = itemTrack
         var dateString: String {
             let dateFormater = NSDateFormatter()
@@ -65,33 +65,32 @@ class BTDetailRouteViewInteractor: NSObject {
         
         // set file name
         let fileName = "screenshot" + dateString + ".png"
-       item.nameFileScreenShotRoute = fileName
+        item.nameFileScreenShotRoute = fileName
         itemsTrack?.append(item)
         
         //search needed view controller for screen shot
         let window = UIApplication.sharedApplication().delegate?.window
         let nawController = window!!.rootViewController as! UINavigationController
-    
+        
         var contr: BTDetailRouteViewController?
-      for  controller in nawController.viewControllers {
+        for  controller in nawController.viewControllers {
             if controller is BTDetailRouteViewController {
-        contr = controller as? BTDetailRouteViewController
-           }
-       }
+                contr = controller as? BTDetailRouteViewController
+            }
+        }
         var imgData: NSData?
         var view: MKMapView!
         if contr != nil {
-         view = contr!.viewMap
-        
+            view = contr!.viewMap
             
             //get data for picture
-        UIGraphicsBeginImageContext((view.frame.size))
-        
-        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsGetCurrentContext()
-        imgData = UIImagePNGRepresentation(image)
+            UIGraphicsBeginImageContext((view.frame.size))
+            
+            view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsGetCurrentContext()
+            imgData = UIImagePNGRepresentation(image)
         }
         
         var path: String?
@@ -113,12 +112,10 @@ class BTDetailRouteViewInteractor: NSObject {
         
         //get track to presenter
         presenter?.getDetailTrack((itemsTrack?.last)!)
-       
+        
         
     }
 }
-
-
 
 extension BTDetailRouteViewInteractor: BTDetailRouteViewInteractorInput {
     
@@ -126,30 +123,28 @@ extension BTDetailRouteViewInteractor: BTDetailRouteViewInteractorInput {
     func setDetailRoutePresenter(detailPresenter: BTDetailRouteViewInteractorOutput) {
         presenter = detailPresenter
     }
-
+    
     //get from xml file required track for presenter
     func queryDetailTrack(trackID: Int) {
-         itemsTrack = (parser?.parserDocument())!
+        itemsTrack = (parser?.parserDocument())!
         if trackID == BTConstant.JUMPTONEWDATA {
             if itemsTrack?.last != nil {
-             presenter?.getDetailTrack((itemsTrack?.last)!)
+                presenter?.getDetailTrack((itemsTrack?.last)!)
             }
             let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
             dispatch_after(dispatchTime, dispatch_get_main_queue(), {
                 self.createScreenShot((self.itemsTrack?.last)!)
             })
             
-            
-            
         } else {
-        for item in itemsTrack! {
-            if trackID == item.trackId {
-                detailRoute = item
+            for item in itemsTrack! {
+                if trackID == item.trackId {
+                    detailRoute = item
+                }
             }
-        }
-        if detailRoute != nil {
-            presenter?.getDetailTrack(detailRoute!)
-        }
+            if detailRoute != nil {
+                presenter?.getDetailTrack(detailRoute!)
+            }
         }
     }
 }

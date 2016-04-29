@@ -31,6 +31,8 @@ class BTDetailRouteViewController: UIViewController {
       super.viewDidLoad()
       viewMap.delegate = self
       shareBarButtonItem = UIBarButtonItem(title: "Share", style: .Plain, target: self, action: "actionShareButtonPressed")
+    let goRideBarButton = UIBarButtonItem(title: "Routes List", style: .Plain, target: self, action: "actionRouteListButtonTapped")
+    self.navigationItem.setLeftBarButtonItem(goRideBarButton, animated: true)
       self.navigationItem.setRightBarButtonItem(shareBarButtonItem, animated: true)
       self.navigationController?.navigationBar.barTintColor = Constants.blueCustomColor
       self.navigationController?.navigationBar.translucent = false
@@ -44,12 +46,15 @@ class BTDetailRouteViewController: UIViewController {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
    }
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(true)
+
+    func actionRouteListButtonTapped() {
         presenter = nil
         interactor = nil
+        self.navigationController?.popViewControllerAnimated(true)
     }
-   
+    @IBAction func trackingPath(sender: AnyObject) {
+        presenter?.startTracking()
+    }
    // MARK: Actions
    func actionShareButtonPressed() {
       presenter?.didTriggerShareButtonTapped()
@@ -103,11 +108,11 @@ extension BTDetailRouteViewController: UITableViewDataSource {
 
 // MARK: - MKMapViewDelegate
 extension BTDetailRouteViewController: MKMapViewDelegate {
-   func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
+   func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
       if !overlay.isKindOfClass(MKPolyline) {
-         return nil
+         return MKPolylineRenderer()
       }
-      
+    
       let polyline = overlay as! MKPolyline
       let renderer = MKPolylineRenderer(polyline: polyline)
       renderer.strokeColor = Constants.blueCustomColor
@@ -170,7 +175,9 @@ extension BTDetailRouteViewController: BTDetailRouteViewInput {
       viewMap.addAnnotation(routeStart)
       
       let routeFinish = CustomPointAnnotation()
+    if polylinePoints.last != nil {
       routeFinish.coordinate = polylinePoints.last!
+    }
       routeFinish.imageName = LocalConstants.finishPinImageName
       viewMap.addAnnotation(routeFinish)
    }
