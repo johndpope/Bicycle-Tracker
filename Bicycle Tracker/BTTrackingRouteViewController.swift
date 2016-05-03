@@ -200,12 +200,11 @@ extension BTTrackingRouteViewController: MKMapViewDelegate {
     renderer.lineWidth = 8
     return renderer
     }
-//    
-//    func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
-//        if let coordinate = currentRegion?.center {
-//            viewMap.setCenterCoordinate(coordinate, animated: false)
-//        }
-//    }
+
+    
+    func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
+       self.mapViewDidFinishLoadingMap(mapView)
+    }
     
 //    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
 //       // mapView.setCenterCoordinate(userLocation.coordinate, animated: false)
