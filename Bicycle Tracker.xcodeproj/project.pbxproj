@@ -38,8 +38,6 @@
 		D062DA841C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062DA831C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift */; };
 		D09B5ED01C9205BC00BBD52D /* BTLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09B5ECF1C9205BC00BBD52D /* BTLocationManager.swift */; };
 		D0AF7E171CABD1D4002746A1 /* BTCheckTrackingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF7E161CABD1D4002746A1 /* BTCheckTrackingLocation.swift */; };
-		D0AF7E231CAC0855002746A1 /* ReturnPath.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D0AF7E221CAC0855002746A1 /* ReturnPath.m4a */; };
-		D0AF7E251CAC0861002746A1 /* WrongWay.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D0AF7E241CAC0861002746A1 /* WrongWay.m4a */; };
 		D0B288211C8B1D2E00F30B0B /* BTProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B288201C8B1D2E00F30B0B /* BTProgressHud.swift */; };
 		D0B288231C8DF96700F30B0B /* ConstantsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B288221C8DF96700F30B0B /* ConstantsEnums.swift */; };
 		D0B4B5AC1C75C5C600D89DE8 /* Bicycle Tracker-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D621C73B3E600B5E9B7 /* Bicycle Tracker-Bridging-Header.h */; };
@@ -56,6 +54,8 @@
 		D0E041221C7B678900F1CF8A /* DetailRouteViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0411B1C7B49C300F1CF8A /* DetailRouteViewInteractorTests.swift */; };
 		D0E470301C9C86C500E80D2F /* BTDetermineComplexityTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E4702F1C9C86C500E80D2F /* BTDetermineComplexityTrack.swift */; };
 		D0E470321C9F03AE00E80D2F /* BTLocationMidWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E470311C9F03AE00E80D2F /* BTLocationMidWay.swift */; };
+		D0EA87521CDA66A500355C04 /* WrongWay.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D0EA87511CDA66A500355C04 /* WrongWay.m4a */; };
+		D0EA87541CDA66CE00355C04 /* ReturnPath.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D0EA87531CDA66CE00355C04 /* ReturnPath.m4a */; };
 		D0ED729C1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED729B1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift */; };
 		D0ED729E1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED729D1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift */; };
 		D0ED72A01CA51B310006CDC2 /* BTTrackingRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED729F1CA51B310006CDC2 /* BTTrackingRouteViewController.swift */; };
@@ -119,8 +119,6 @@
 		D062DA8C1C6C816B00C44198 /* BTFetchTrackItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTFetchTrackItemDelegate.swift; sourceTree = "<group>"; };
 		D09B5ECF1C9205BC00BBD52D /* BTLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTLocationManager.swift; sourceTree = "<group>"; };
 		D0AF7E161CABD1D4002746A1 /* BTCheckTrackingLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCheckTrackingLocation.swift; sourceTree = "<group>"; };
-		D0AF7E221CAC0855002746A1 /* ReturnPath.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ReturnPath.m4a; sourceTree = "<group>"; };
-		D0AF7E241CAC0861002746A1 /* WrongWay.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = WrongWay.m4a; sourceTree = "<group>"; };
 		D0B288201C8B1D2E00F30B0B /* BTProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTProgressHud.swift; sourceTree = "<group>"; };
 		D0B288221C8DF96700F30B0B /* ConstantsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsEnums.swift; sourceTree = "<group>"; };
 		D0C1C9A41C770BC500F26506 /* BTDetailRouteViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDetailRouteViewInteractor.swift; sourceTree = "<group>"; };
@@ -136,6 +134,8 @@
 		D0E0411D1C7B4A0200F1CF8A /* RouteListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteListInteractorTests.swift; sourceTree = "<group>"; };
 		D0E4702F1C9C86C500E80D2F /* BTDetermineComplexityTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDetermineComplexityTrack.swift; sourceTree = "<group>"; };
 		D0E470311C9F03AE00E80D2F /* BTLocationMidWay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTLocationMidWay.swift; sourceTree = "<group>"; };
+		D0EA87511CDA66A500355C04 /* WrongWay.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = WrongWay.m4a; sourceTree = "<group>"; };
+		D0EA87531CDA66CE00355C04 /* ReturnPath.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ReturnPath.m4a; sourceTree = "<group>"; };
 		D0ED729B1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRouteInteractor.swift; sourceTree = "<group>"; };
 		D0ED729D1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRoutePresenter.swift; sourceTree = "<group>"; };
 		D0ED729F1CA51B310006CDC2 /* BTTrackingRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRouteViewController.swift; sourceTree = "<group>"; };
@@ -412,8 +412,8 @@
 		D0AF7E181CABEEB4002746A1 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
-				D0AF7E241CAC0861002746A1 /* WrongWay.m4a */,
-				D0AF7E221CAC0855002746A1 /* ReturnPath.m4a */,
+				D0EA87511CDA66A500355C04 /* WrongWay.m4a */,
+				D0EA87531CDA66CE00355C04 /* ReturnPath.m4a */,
 			);
 			name = Alerts;
 			sourceTree = "<group>";
@@ -590,8 +590,8 @@
 			files = (
 				D061994C1C71C6D30079DA7A /* Podfile in Resources */,
 				019558481C68BA7E0053C2CF /* Assets.xcassets in Resources */,
-				D0AF7E251CAC0861002746A1 /* WrongWay.m4a in Resources */,
-				D0AF7E231CAC0855002746A1 /* ReturnPath.m4a in Resources */,
+				D0EA87521CDA66A500355C04 /* WrongWay.m4a in Resources */,
+				D0EA87541CDA66CE00355C04 /* ReturnPath.m4a in Resources */,
 				D004899E1C708689000DD9C0 /* Item.xml in Resources */,
 				019558461C68BA7E0053C2CF /* Main.storyboard in Resources */,
 			);
