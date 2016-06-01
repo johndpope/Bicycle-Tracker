@@ -22,5 +22,12 @@ struct BTTrackItem {
     var startingTime: NSDate?
     var finishingTime: NSDate?
     var nameFileScreenShotRoute: String?
+    var midWay: BTLocationMidWay?
+    var finishingAddress: String?
+    var startingAddress: String?
+    var routeComplexity: String?
+    var middleRouteAddress: String?
+    var circleRoute: Bool = false
+    var usersTracks: [BTUserTrack]?
     
 }

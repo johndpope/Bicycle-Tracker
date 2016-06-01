@@ -41,4 +41,8 @@ extension String {
         
         return "\(strMinutes):\(strSeconds)"
     }
+   
+   static func formattedHeightDifference(heightDifference: Double) -> String {
+      return String(heightDifference)
+   }
 }

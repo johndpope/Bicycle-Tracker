@@ -11,7 +11,7 @@ import UIKit
 class BTRouteListViewController: UIViewController {
    
    struct LocalConstants {
-      static let tableViewRowHeight: CGFloat = 57
+      static let tableViewRowHeight: CGFloat = 90
    }
    
    @IBOutlet weak var searchBar: UISearchBar!
@@ -78,6 +78,7 @@ extension BTRouteListViewController: UITableViewDelegate {
       output?.didTriggerTapCell(atIndexPath: indexPath)
    }
 }
+
 
 // MARK: - UISearchBarDelegate
 extension BTRouteListViewController: UISearchBarDelegate {

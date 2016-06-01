@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 protocol BTLocationManagerOutput: class {
-    func fetchLocationsInteractor(locations:[CLLocation])
+    func fetchLocationsInteractor(locations:[CLLocation], alert: Bool)
 }
 protocol BTLocationManagerInput {
     func setPresenterProtocol(mainPresenter: BTLocationManagerOutput)
@@ -63,13 +63,30 @@ class BTLocationManager: NSObject {
         }
         return locationManagerIOS8
     }
+    //send signal about power of connection
+  private  func getAlertPoorSignal (location: CLLocation) -> Bool {
+        if (location.horizontalAccuracy < BTHorizontalAccuracy.NoSignal.rawValue)
+        {
+            return true
+            // No Signal
+        }
+        else if (location.horizontalAccuracy > BTHorizontalAccuracy.PoorSingnal.rawValue)
+        {
+            return true
+            // Poor Signal
+        }
+                   return false
+    
+    }
+
 }
 
 extension BTLocationManager: CLLocationManagerDelegate {
     
     //update location data
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        presenter?.fetchLocationsInteractor(locations)
+        let alert: Bool = getAlertPoorSignal(locations.last!)
+        presenter?.fetchLocationsInteractor(locations, alert: alert)
     }
     
     //callback authorization status, than allow work program in background

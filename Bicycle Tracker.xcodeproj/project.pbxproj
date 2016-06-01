@@ -37,6 +37,7 @@
 		D061994C1C71C6D30079DA7A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D061994B1C71C6D30079DA7A /* Podfile */; };
 		D062DA841C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062DA831C6BBA7C00C44198 /* Interactor_Bicycle_TrackerTests.swift */; };
 		D09B5ED01C9205BC00BBD52D /* BTLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09B5ECF1C9205BC00BBD52D /* BTLocationManager.swift */; };
+		D0AF7E171CABD1D4002746A1 /* BTCheckTrackingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF7E161CABD1D4002746A1 /* BTCheckTrackingLocation.swift */; };
 		D0B288211C8B1D2E00F30B0B /* BTProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B288201C8B1D2E00F30B0B /* BTProgressHud.swift */; };
 		D0B288231C8DF96700F30B0B /* ConstantsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B288221C8DF96700F30B0B /* ConstantsEnums.swift */; };
 		D0B4B5AC1C75C5C600D89DE8 /* Bicycle Tracker-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D621C73B3E600B5E9B7 /* Bicycle Tracker-Bridging-Header.h */; };
@@ -51,6 +52,15 @@
 		D0D23D661C75B3DF00B5E9B7 /* BTRouteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D23D651C75B3DF00B5E9B7 /* BTRouteListInteractor.swift */; };
 		D0E0411E1C7B4A0200F1CF8A /* RouteListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0411D1C7B4A0200F1CF8A /* RouteListInteractorTests.swift */; };
 		D0E041221C7B678900F1CF8A /* DetailRouteViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0411B1C7B49C300F1CF8A /* DetailRouteViewInteractorTests.swift */; };
+		D0E470301C9C86C500E80D2F /* BTDetermineComplexityTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E4702F1C9C86C500E80D2F /* BTDetermineComplexityTrack.swift */; };
+		D0E470321C9F03AE00E80D2F /* BTLocationMidWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E470311C9F03AE00E80D2F /* BTLocationMidWay.swift */; };
+		D0EA87521CDA66A500355C04 /* WrongWay.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D0EA87511CDA66A500355C04 /* WrongWay.m4a */; };
+		D0EA87541CDA66CE00355C04 /* ReturnPath.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D0EA87531CDA66CE00355C04 /* ReturnPath.m4a */; };
+		D0ED729C1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED729B1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift */; };
+		D0ED729E1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED729D1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift */; };
+		D0ED72A01CA51B310006CDC2 /* BTTrackingRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED729F1CA51B310006CDC2 /* BTTrackingRouteViewController.swift */; };
+		D0ED72A31CA6AE490006CDC2 /* BTTrackingRouteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED72A21CA6AE490006CDC2 /* BTTrackingRouteAssembly.swift */; };
+		D0ED72A51CA964F80006CDC2 /* BTUserTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED72A41CA964F80006CDC2 /* BTUserTrack.swift */; };
 		D0FAF9471C7F00D300E83DEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAF9461C7F00D300E83DEA /* QuartzCore.framework */; };
 		E9FF569C00899A180B3AC83B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF1D45F595543B900DA828B /* libPods.a */; };
 		EE24CDE11C68D64D0050097B /* BTNewRouteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24CDE01C68D64D0050097B /* BTNewRouteInteractor.swift */; };
@@ -72,7 +82,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0129D96A1C6D1B320064AE12 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		01332DAA1C75162400043031 /* BTNewRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTNewRouteViewController.swift; sourceTree = "<group>"; };
 		01332DAC1C75163100043031 /* BTNewRouteViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTNewRouteViewInput.swift; sourceTree = "<group>"; };
 		01332DAE1C75163E00043031 /* BTNewRouteViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTNewRouteViewOutput.swift; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 		D062DA851C6BBA7C00C44198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D062DA8C1C6C816B00C44198 /* BTFetchTrackItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTFetchTrackItemDelegate.swift; sourceTree = "<group>"; };
 		D09B5ECF1C9205BC00BBD52D /* BTLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTLocationManager.swift; sourceTree = "<group>"; };
+		D0AF7E161CABD1D4002746A1 /* BTCheckTrackingLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCheckTrackingLocation.swift; sourceTree = "<group>"; };
 		D0B288201C8B1D2E00F30B0B /* BTProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTProgressHud.swift; sourceTree = "<group>"; };
 		D0B288221C8DF96700F30B0B /* ConstantsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsEnums.swift; sourceTree = "<group>"; };
 		D0C1C9A41C770BC500F26506 /* BTDetailRouteViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDetailRouteViewInteractor.swift; sourceTree = "<group>"; };
@@ -122,6 +132,15 @@
 		D0D23D651C75B3DF00B5E9B7 /* BTRouteListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTRouteListInteractor.swift; sourceTree = "<group>"; };
 		D0E0411B1C7B49C300F1CF8A /* DetailRouteViewInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouteViewInteractorTests.swift; sourceTree = "<group>"; };
 		D0E0411D1C7B4A0200F1CF8A /* RouteListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteListInteractorTests.swift; sourceTree = "<group>"; };
+		D0E4702F1C9C86C500E80D2F /* BTDetermineComplexityTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDetermineComplexityTrack.swift; sourceTree = "<group>"; };
+		D0E470311C9F03AE00E80D2F /* BTLocationMidWay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTLocationMidWay.swift; sourceTree = "<group>"; };
+		D0EA87511CDA66A500355C04 /* WrongWay.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = WrongWay.m4a; sourceTree = "<group>"; };
+		D0EA87531CDA66CE00355C04 /* ReturnPath.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ReturnPath.m4a; sourceTree = "<group>"; };
+		D0ED729B1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRouteInteractor.swift; sourceTree = "<group>"; };
+		D0ED729D1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRoutePresenter.swift; sourceTree = "<group>"; };
+		D0ED729F1CA51B310006CDC2 /* BTTrackingRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRouteViewController.swift; sourceTree = "<group>"; };
+		D0ED72A21CA6AE490006CDC2 /* BTTrackingRouteAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTrackingRouteAssembly.swift; sourceTree = "<group>"; };
+		D0ED72A41CA964F80006CDC2 /* BTUserTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUserTrack.swift; sourceTree = "<group>"; };
 		D0FAF9461C7F00D300E83DEA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0FDD7F71C96CC6B007E9C68 /* ReadWriteXMLFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadWriteXMLFile.swift; sourceTree = "<group>"; };
 		EE24CDE01C68D64D0050097B /* BTNewRouteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTNewRouteInteractor.swift; sourceTree = "<group>"; };
@@ -175,7 +194,6 @@
 				D0D23D601C73B2AD00B5E9B7 /* XMLDocumentClass */,
 				D0D23D5C1C726C0A00B5E9B7 /* libz.tbd */,
 				D0D23D5A1C726BF100B5E9B7 /* libxml2.tbd */,
-				0129D96A1C6D1B320064AE12 /* MapKit.framework */,
 				8DF1D45F595543B900DA828B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -184,6 +202,7 @@
 		0129D96D1C6D3EC20064AE12 /* Outdoor mode */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED72971CA492C70006CDC2 /* TrackingRouteModule */,
 				01B321AC1C75B3DF00F8C71C /* NewRouteModule */,
 			);
 			name = "Outdoor mode";
@@ -222,6 +241,7 @@
 		0195583F1C68BA7E0053C2CF /* Bicycle Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				D0AF7E181CABEEB4002746A1 /* Alerts */,
 				D056A7EA1C919F4A005E7AF3 /* Helpers */,
 				D004899C1C708637000DD9C0 /* Item */,
 				019558401C68BA7E0053C2CF /* AppDelegate.swift */,
@@ -352,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				D056A7ED1C919F8F005E7AF3 /* String+FilePath.swift */,
+				D0E4702F1C9C86C500E80D2F /* BTDetermineComplexityTrack.swift */,
 				D056A7EE1C919F8F005E7AF3 /* String+MathFormatters.swift */,
 				D056A7EB1C919F78005E7AF3 /* Constants.swift */,
 				287806E01C81131E0079DEBA /* UIImage+Resize.swift */,
@@ -382,8 +403,19 @@
 				EE24CDEE1C69EBA00050097B /* BTGeolocationData.swift */,
 				EE24CDF21C69F6610050097B /* BTGetDataFromPresenterRequest.swift */,
 				EE24CDF01C69EBD10050097B /* BTTrackItem.swift */,
+				D0ED72A41CA964F80006CDC2 /* BTUserTrack.swift */,
+				D0E470311C9F03AE00E80D2F /* BTLocationMidWay.swift */,
 			);
 			name = ItemChangeModule;
+			sourceTree = "<group>";
+		};
+		D0AF7E181CABEEB4002746A1 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA87511CDA66A500355C04 /* WrongWay.m4a */,
+				D0EA87531CDA66CE00355C04 /* ReturnPath.m4a */,
+			);
+			name = Alerts;
 			sourceTree = "<group>";
 		};
 		D0D23D601C73B2AD00B5E9B7 /* XMLDocumentClass */ = {
@@ -404,6 +436,50 @@
 				D062DA8C1C6C816B00C44198 /* BTFetchTrackItemDelegate.swift */,
 			);
 			name = Servises;
+			sourceTree = "<group>";
+		};
+		D0ED72971CA492C70006CDC2 /* TrackingRouteModule */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED72A11CA6AE230006CDC2 /* Assembly */,
+				D0ED72981CA492E00006CDC2 /* Interactor */,
+				D0ED729A1CA492F50006CDC2 /* Presenter */,
+				D0ED72991CA492ED0006CDC2 /* View */,
+			);
+			name = TrackingRouteModule;
+			sourceTree = "<group>";
+		};
+		D0ED72981CA492E00006CDC2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED729B1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift */,
+				D0AF7E161CABD1D4002746A1 /* BTCheckTrackingLocation.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		D0ED72991CA492ED0006CDC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED729F1CA51B310006CDC2 /* BTTrackingRouteViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D0ED729A1CA492F50006CDC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED729D1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		D0ED72A11CA6AE230006CDC2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED72A21CA6AE490006CDC2 /* BTTrackingRouteAssembly.swift */,
+			);
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 		E08BB31E44A3999569BD685B /* Pods */ = {
@@ -474,6 +550,12 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
 						};
 					};
 					D062DA801C6BBA7C00C44198 = {
@@ -508,6 +590,8 @@
 			files = (
 				D061994C1C71C6D30079DA7A /* Podfile in Resources */,
 				019558481C68BA7E0053C2CF /* Assets.xcassets in Resources */,
+				D0EA87521CDA66A500355C04 /* WrongWay.m4a in Resources */,
+				D0EA87541CDA66CE00355C04 /* ReturnPath.m4a in Resources */,
 				D004899E1C708689000DD9C0 /* Item.xml in Resources */,
 				019558461C68BA7E0053C2CF /* Main.storyboard in Resources */,
 			);
@@ -595,6 +679,7 @@
 				D0B288231C8DF96700F30B0B /* ConstantsEnums.swift in Sources */,
 				01F75D321C773BED00006D55 /* BTDetailRouteViewController.swift in Sources */,
 				287806E51C8128A20079DEBA /* BTRouteListItemViewProtocol.swift in Sources */,
+				D0ED729C1CA51AF70006CDC2 /* BTTrackingRouteInteractor.swift in Sources */,
 				289DEA9F1C70D280008CDE7F /* BTFetchTrackItemDelegate.swift in Sources */,
 				01F75D341C773BF800006D55 /* BTDetailRouteViewInput.swift in Sources */,
 				EE24CDEF1C69EBA00050097B /* BTGeolocationData.swift in Sources */,
@@ -602,19 +687,24 @@
 				D09B5ED01C9205BC00BBD52D /* BTLocationManager.swift in Sources */,
 				019ABDDC1C7BA98B002B9B26 /* BTDetailRouteViewPresenter.swift in Sources */,
 				D00489A21C711B82000DD9C0 /* BTNewRoutePresenter.swift in Sources */,
+				D0ED729E1CA51B120006CDC2 /* BTTrackingRoutePresenter.swift in Sources */,
 				01332DAF1C75163E00043031 /* BTNewRouteViewOutput.swift in Sources */,
 				28DD918E1C73D6C300F9AA7A /* BTRouteListPresenter.swift in Sources */,
 				D056A7F01C919F8F005E7AF3 /* String+MathFormatters.swift in Sources */,
+				D0E470301C9C86C500E80D2F /* BTDetermineComplexityTrack.swift in Sources */,
 				019558411C68BA7E0053C2CF /* AppDelegate.swift in Sources */,
 				D0D23D661C75B3DF00B5E9B7 /* BTRouteListInteractor.swift in Sources */,
+				D0E470321C9F03AE00E80D2F /* BTLocationMidWay.swift in Sources */,
 				D0D23D5F1C72719D00B5E9B7 /* BTXMLDocumentWriter.swift in Sources */,
 				287806E71C8144670079DEBA /* BTRouteListItem.swift in Sources */,
+				D0ED72A01CA51B310006CDC2 /* BTTrackingRouteViewController.swift in Sources */,
 				01F75D361C773C0100006D55 /* BTDetailRouteViewOutput.swift in Sources */,
 				28DD91831C7374DA00F9AA7A /* BTRouteListViewController.swift in Sources */,
 				EE24CDED1C69EB690050097B /* BTPoiItem.swift in Sources */,
 				D056A7EF1C919F8F005E7AF3 /* String+FilePath.swift in Sources */,
 				28DD91901C73D72000F9AA7A /* BTRouteListViewOutput.swift in Sources */,
 				EE24CDF31C69F6610050097B /* BTGetDataFromPresenterRequest.swift in Sources */,
+				D0ED72A51CA964F80006CDC2 /* BTUserTrack.swift in Sources */,
 				EE24CDEB1C69EB3D0050097B /* BTGetDataFromPresenter.swift in Sources */,
 				01332DAB1C75162400043031 /* BTNewRouteViewController.swift in Sources */,
 				D0B288211C8B1D2E00F30B0B /* BTProgressHud.swift in Sources */,
@@ -625,6 +715,8 @@
 				289DEA9D1C70D25D008CDE7F /* BTFetchDataPresenter.swift in Sources */,
 				01332DAD1C75163100043031 /* BTNewRouteViewInput.swift in Sources */,
 				D0C1C9A51C770BC500F26506 /* BTDetailRouteViewInteractor.swift in Sources */,
+				D0ED72A31CA6AE490006CDC2 /* BTTrackingRouteAssembly.swift in Sources */,
+				D0AF7E171CABD1D4002746A1 /* BTCheckTrackingLocation.swift in Sources */,
 				D056A7EC1C919F78005E7AF3 /* Constants.swift in Sources */,
 				D0D23D591C72403500B5E9B7 /* BTXMLParser.swift in Sources */,
 			);

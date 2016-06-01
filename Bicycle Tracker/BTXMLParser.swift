@@ -20,6 +20,11 @@ class BTXMLParser: NSObject, BTXMLParserModuleOutput, NSXMLParserDelegate {
     var currentTrack: BTTrackItem?
     var currentLocation: BTGeolocationData?
     var currentPOI: BTPoiItem?
+    var currentUserTrack: BTUserTrack?
+    var currentGeolocationDataUser: BTGeolocationDataUser?
+    var currentUserLocation: BTGeolocationData?
+    var currentUserPOIPoints: [BTPoiItem]?
+    var currentUserPOI: BTPoiItem?
     var xmlText: String
    
      init(nameFile: String?) {
@@ -72,6 +77,29 @@ class BTXMLParser: NSObject, BTXMLParserModuleOutput, NSXMLParserDelegate {
         case BTNameTagOfFile.POI:
             currentPOI = BTPoiItem()
             
+        case BTNameTagOfFile.MIDWAY:
+            currentTrack?.midWay = BTLocationMidWay()
+            
+        case BTNameTagOfFile.USERSTRACKS:
+            currentTrack?.usersTracks = [BTUserTrack]()
+            
+        case BTNameTagOfFile.USER:
+            currentUserTrack = BTUserTrack()
+            
+        case BTNameTagOfFile.USERTRAVELEDPOINTS:
+            currentUserTrack?.traveledPoints = [BTGeolocationDataUser]()
+            
+        case BTNameTagOfFile.USERPOINT:
+            currentGeolocationDataUser = BTGeolocationDataUser()
+            
+        case BTNameTagOfFile.USERLOCATION:
+            currentUserLocation = BTGeolocationData()
+            
+        case BTNameTagOfFile.USERLISTPOI:
+            currentUserLocation?.listPOI = [BTPoiItem]()
+        case BTNameTagOfFile.USERPOI:
+            currentUserPOI = BTPoiItem()
+            
         default:
             break
         }
@@ -83,6 +111,14 @@ class BTXMLParser: NSObject, BTXMLParserModuleOutput, NSXMLParserDelegate {
         switch elementName {
         case BTNameTagOfFile.LISTPOI:
             currentLocation?.listPOI = itemsPOI!
+            
+        case BTNameTagOfFile.USER:
+            currentTrack?.usersTracks?.append(currentUserTrack!)
+        case BTNameTagOfFile.USERPOI:
+            currentUserLocation?.listPOI.append(currentUserPOI!)
+            
+        case BTNameTagOfFile.USERPOINT:
+            currentUserTrack?.traveledPoints.append(currentGeolocationDataUser!)
         
         case BTNameTagOfFile.POI:
             itemsPOI?.append(currentPOI!)
@@ -154,6 +190,10 @@ class BTXMLParser: NSObject, BTXMLParserModuleOutput, NSXMLParserDelegate {
             if let latitude = Double(xmlText) {
             currentLocation?.latitude = latitude
             }
+        case BTNameTagOfFile.COURSE:
+            if let course = Double (xmlText) {
+                currentLocation?.course = course
+            }
             
         case BTNameTagOfFile.LONGITUDE:
             if let longitude = Double(xmlText) {
@@ -200,6 +240,127 @@ class BTXMLParser: NSObject, BTXMLParserModuleOutput, NSXMLParserDelegate {
             if let track = currentTrack {
                 itemsTrack.append(track)
             }
+        case BTNameTagOfFile.LONGITUDEMIDWAY:
+            if let longitude = Double(xmlText) {
+                currentTrack?.midWay?.longitudeMidWay = longitude
+            }
+        case BTNameTagOfFile.LATITUDEMIDWAY:
+            if let latitude = Double(xmlText) {
+                currentTrack?.midWay?.latitudeMidWay = latitude
+            }
+        case BTNameTagOfFile.ADDRESSFINISHPOINT:
+            if xmlText.isEmpty {
+                currentTrack?.finishingAddress = BTConstant.EMPTYSTRING
+            } else {
+                currentTrack?.finishingAddress = xmlText
+            }
+        case BTNameTagOfFile.ADDRESSSTARTPOINT:
+            if xmlText.isEmpty {
+                currentTrack?.startingAddress = BTConstant.EMPTYSTRING
+            } else {
+                currentTrack?.startingAddress = xmlText
+            }
+        case BTNameTagOfFile.ROUTECOMPLEXITY:
+            if xmlText.isEmpty {
+                currentTrack?.routeComplexity = BTConstant.EMPTYSTRING
+            } else {
+                currentTrack?.routeComplexity = xmlText
+            }
+        case BTNameTagOfFile.MIDDLEROUTEADDRESS:
+            if xmlText.isEmpty {
+                currentTrack?.middleRouteAddress = BTConstant.EMPTYSTRING
+            }
+            else {
+                currentTrack?.middleRouteAddress = xmlText
+            }
+        case BTNameTagOfFile.CIRCLEROUTE:
+            if xmlText == "true" {
+                currentTrack?.circleRoute = true
+            }
+            else {
+                currentTrack?.circleRoute = false
+            }
+        case BTNameTagOfFile.USERTRACKID:
+            if let trackId = Int(xmlText) {
+             currentUserTrack?.trackId = trackId
+            }
+        case BTNameTagOfFile.USERDURATIONTRACKING:
+            if let duration = Double(xmlText) {
+                currentUserTrack?.durationTracking = duration
+            }
+            
+        case BTNameTagOfFile.USERDISTNACETRAVELED:
+            if let distance = Double(xmlText) {
+                currentUserTrack?.distanceTraveled = distance
+            }
+        case BTNameTagOfFile.ONWAY:
+            if xmlText == "true" {
+                currentGeolocationDataUser?.onWay = true
+            } else {
+                currentGeolocationDataUser?.onWay = false
+            }
+        case BTNameTagOfFile.USERLOCATION:
+           currentGeolocationDataUser?.location = currentUserLocation!
+            
+        case BTNameTagOfFile.USERLATITUDE:
+            if let latitude = Double(xmlText) {
+                currentUserLocation?.latitude = latitude
+            }
+        case BTNameTagOfFile.USERLONGITUDE:
+            if let longitude = Double(xmlText) {
+                currentUserLocation?.longitude = longitude
+            }
+        case BTNameTagOfFile.USERALTITUDE:
+            if let altitude = Double(xmlText) {
+                currentUserLocation?.altitude = altitude
+            }
+        case BTNameTagOfFile.USERFLOOR:
+            if let floor = Int(xmlText) {
+                currentUserLocation?.floor = floor
+            }
+        case BTNameTagOfFile.USERCOURSE:
+            if let course = Double(xmlText) {
+                currentUserLocation?.course = course
+            }
+        case BTNameTagOfFile.USERSPEED:
+            if let speed = Double(xmlText) {
+                currentUserLocation?.speed = speed
+            }
+            
+        case BTNameTagOfFile.USERTIMESTAMP:
+            currentUserLocation?.timeStamp = formatStringToDate(xmlText)
+            
+        case BTNameTagOfFile.USERDISTANCEFROMLOCATION:
+            if let distance = Double(xmlText) {
+                currentUserLocation?.distanceFromLocation = distance
+            }
+
+        case BTNameTagOfFile.USERNAMEPOI:
+            if xmlText.isEmpty {
+                currentUserPOI?.name = BTConstant.EMPTYSTRING
+            } else {
+                currentUserPOI?.name = xmlText
+            }
+            
+        case BTNameTagOfFile.USERCOMMENTSPOI:
+            if xmlText.isEmpty {
+                currentUserPOI?.comments = BTConstant.EMPTYSTRING
+            } else {
+                currentUserPOI?.comments = xmlText
+            }
+
+        case BTNameTagOfFile.USERTYPEPOI:
+            if xmlText.isEmpty {
+                currentUserPOI?.type = BTConstant.EMPTYSTRING
+            } else {
+                currentUserPOI?.type = xmlText
+            }
+            
+        case BTNameTagOfFile.USERRESTINGTIMEPOI:
+            if let restingTime = Double(xmlText) {
+                currentUserPOI?.restingTime = restingTime
+            }
+
         default:
             break
         }

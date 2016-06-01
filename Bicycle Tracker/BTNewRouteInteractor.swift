@@ -49,6 +49,9 @@ class BTNewRouteInteractor: NSObject {
     private var locationManager: BTLocationManagerInput
     private var timer: NSTimer?
     lazy var locationPoints = [CLLocation]()
+    var getItemTrack: BTTrackItem {
+        return itemTrack
+    }
     
     override init() {
         itemTrack = BTTrackItem()
@@ -90,7 +93,7 @@ class BTNewRouteInteractor: NSObject {
         if timer != nil {
             timer!.invalidate()
         }
-        timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("didPause"), userInfo: NSDate(), repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "didPause", userInfo: NSDate(), repeats: true)
     }
     
     //stop timer
@@ -102,7 +105,7 @@ class BTNewRouteInteractor: NSObject {
     
     // set speed 0 if not update location more than 4 second
     func didPause() {
-        if abs(NSDate().timeIntervalSinceDate((locationPoints.last?.timestamp)!)) > 4 {
+        if abs(NSDate().timeIntervalSinceDate((locationPoints.last?.timestamp)!)) > 5 {
             dataPresenter.сurrentSpeed = 0.0
             presenter?.didUpdateDataToPresenter(dataPresenter)
         }
@@ -207,7 +210,7 @@ class BTNewRouteInteractor: NSObject {
 extension BTNewRouteInteractor: BTLocationManagerOutput {
     
     //update location data
-    func  fetchLocationsInteractor(locations: [CLLocation]) {
+    func  fetchLocationsInteractor(locations: [CLLocation], alert:Bool = true) {
         if startCycling != nil {
             totalTimeCycling = NSDate().timeIntervalSinceDate(startCycling!)
         } else {
@@ -226,9 +229,7 @@ extension BTNewRouteInteractor: BTLocationManagerOutput {
                     checkChengingCurrentSpeedForChangingZoom(location)
                 }
                 let lastLocation = locationPoints.last
-                if lastLocation != nil {
-                    
-                }
+               
                 dataPresenter.lastCoordinateLocation = locationPoints.last?.coordinate
                 
                 //save current data to temp variable
@@ -243,6 +244,7 @@ extension BTNewRouteInteractor: BTLocationManagerOutput {
                 geolocationData.altitude = location.altitude
                 geolocationData.speed = location.speed
                 geolocationData.floor = location.floor?.level
+                geolocationData.course = location.course
                 if lastLocation != nil {
                     geolocationData.distanceFromLocation = location.distanceFromLocation(lastLocation!)
                 }
@@ -250,12 +252,18 @@ extension BTNewRouteInteractor: BTLocationManagerOutput {
                 itemTrack.listLocations.append(geolocationData)
                 
                 //save name of track
-                if itemTrack.presenterData?.nameTracking == nil {
-                    let locationForName = CLLocation(latitude: (itemTrack.listLocations.first?.latitude)!, longitude: (itemTrack.listLocations.first?.longitude)!)
+                //if itemTrack.presenterData?.nameTracking == nil {
+                    var locationForName = CLLocation(latitude: (itemTrack.listLocations.first?.latitude)!, longitude: (itemTrack.listLocations.first?.longitude)!)
                     setNameTrack(locationForName)
                     if nameOfPlace != nil {
                         itemTrack.presenterData?.nameTracking = nameOfPlace!
+                        itemTrack.startingAddress = nameOfPlace!
                     }
+               // }
+                locationForName = CLLocation(latitude: (itemTrack.listLocations.last?.latitude)!, longitude: (itemTrack.listLocations.last?.longitude)!)
+                setNameTrack(locationForName)
+                if nameOfPlace != nil {
+                    itemTrack.finishingAddress = nameOfPlace!
                 }
                 //send data to presenter
                 presenter?.didUpdateDataToPresenter(dataPresenter)
@@ -271,20 +279,17 @@ extension BTNewRouteInteractor: BTLocationManagerOutput {
                 print("Reverse geocoder failed with error" + error!.localizedDescription)
                 return
             }
-            if placemarks != nil {
-                
+            
+                //this try recreate
                 if placemarks!.count > 0 {
-                    if placemarks!.first! .thoroughfare != nil {
-                        self.nameOfPlace = placemarks!.first!.thoroughfare! + " "
-                    }
-                    if placemarks!.first!.locality != nil && self.nameOfPlace != nil {
-                       self.nameOfPlace =  self.nameOfPlace! + placemarks!.first!.locality!
-                    }
+                    let street =  placemarks?.last?.thoroughfare ?? " " + " "
+                    let building =  placemarks?.last?.subThoroughfare ?? " " + " "
+                    let city =  placemarks?.last?.locality ?? " " + " "
+                    self.nameOfPlace = " " + street + " " + building + " " + city
 
                 } else {
                     print("Problem with the data received from geocoder")
                 }
-            }
         })
     }
 }
@@ -337,12 +342,10 @@ extension BTNewRouteInteractor: BTNewRouteInteractorInput {
             
             itemTrack.startingLocation = "\(startPointLatitude) " + "\(startPointLongitude)"
             itemTrack.finishingLocation = "\(finishPointLatitude) " + "\(finishPointLongitude)"
-            var minHeight: Double = 0
-            var maxHeight: Double = 0
+            var minHeight: Double = locationPoints.first?.altitude ?? 0
+            var maxHeight: Double = locationPoints.first?.altitude ?? 0
             for location in locationPoints {
-                if minHeight == 0 {
-                    minHeight = location.altitude
-                }
+               
                 if location.altitude < minHeight {
                     minHeight = location.altitude
                 }
@@ -350,7 +353,23 @@ extension BTNewRouteInteractor: BTNewRouteInteractorInput {
                     maxHeight = location.altitude
                 }
             }
+            itemTrack.heightDifference = maxHeight - minHeight
+            itemTrack.routeComplexity = BTDefinitionComplexity.getComplexity(itemTrack)
+            itemTrack.midWay = BTDefinitionComplexity.setMidWay(itemTrack)
             
+            if itemTrack.midWay?.latitudeMidWay != nil && itemTrack.midWay!.longitudeMidWay != nil {
+               setNameTrack(CLLocation(latitude: itemTrack.midWay!.latitudeMidWay! , longitude: itemTrack.midWay!.longitudeMidWay!))
+            }
+            
+            itemTrack.middleRouteAddress = nameOfPlace
+            var startLocation: CLLocation?
+            var finishLocation: CLLocation?
+            if itemTrack.listLocations.count > 0  {
+             startLocation = CLLocation(latitude: (itemTrack.listLocations.first?.latitude)!, longitude: (itemTrack.listLocations.first?.longitude)!)
+            //if itemTrack .listLocations.last != nil {
+             finishLocation = CLLocation(latitude: (itemTrack.listLocations.last?.latitude)!, longitude: (itemTrack.listLocations.last?.longitude)!)
+            itemTrack.circleRoute = findingDictance(startLocation!, finish: finishLocation!)
+            }
             //save data to file
             itemData?.getTrackDidFinish(itemTrack)
             locationManager.stopLocation()
@@ -374,6 +393,13 @@ extension BTNewRouteInteractor: BTNewRouteInteractorInput {
             geolocationData!.listPOI.append(item)
             
         }
+    }
+    
+    func findingDictance(start: CLLocation, finish: CLLocation) -> Bool {
+        if abs(start.distanceFromLocation(finish)) < 50 {
+            return true
+        }
+        return false
     }
 }
 
